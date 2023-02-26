@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="joint" default="1"/>
+  <node name="rqt_plot_effort" pkg="rqt_plot" type="rqt_plot" args="-e /joint_states/effort[$(arg joint)]"/>
+  <node name="rqt_plot_velocity" pkg="rqt_plot" type="rqt_plot" args="-e /joint_states/velocity[$(arg joint)]"/>
+  <node name="rqt_plot_position" pkg="rqt_plot" type="rqt_plot" args="-e /joint_states/position[$(arg joint)]"/>
+</launch>
+

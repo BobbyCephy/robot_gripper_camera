@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot name="kinect" xmlns:xacro="http://ros.org/wiki/xacro">    
+  <xacro:include filename="$(find common_sensors)/urdf/sensors/kinect.urdf.xacro"/>
+  <xacro:sensor_kinect parent="wrist_3_link" cam_px="0.1" cam_py="-0.1" cam_op="${-pi/2}" cam_oy="${pi/2}"/>
+</robot>

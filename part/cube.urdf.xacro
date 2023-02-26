@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="cube">
+  <xacro:include filename="$(find robot_gripper_camera)/part/cube.xacro"/>
+  <xacro:arg name="suffix" default="1"/>
+  <xacro:arg name="size" default="0.03"/>
+  <xacro:cube suffix="$(arg suffix)" size="$(arg size)"/>
+</robot>
+

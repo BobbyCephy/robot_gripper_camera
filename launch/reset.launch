@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="name" default="cuboid"/>
+  
+  <arg name="x" default="0.81"/>
+  <arg name="y" default="0.3075"/>
+  <arg name="z" default="1.05"/>
+  
+  <node pkg="rosservice" type="rosservice" name="rosservice" args="call gazebo/set_model_state '{model_state: {model_name: $(arg name), pose: {position: {x: $(arg x), y: $(arg y), z: $(arg z)}, orientation: {x: 0, y: 0, z: 0, w: 1} }, twist: {linear: {x: 0 , y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 }}, reference_frame: world}}'"/>
+</launch>
+

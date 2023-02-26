@@ -1,0 +1,27 @@
+Physikalische Eigenschaften für camera_holder_mount
+Allgemeine Eigenschaften:
+	Material:	{}
+	Dichte:	1,578 g/cm^3
+	Masse:	0,019 kg (Relativer Fehler = 0,126238%)
+	Bereich:	9952,677 mm^2 (Relativer Fehler = 0,101975%)
+	Volumen:	11786,759 mm^3 (Relativer Fehler = 0,126238%)
+Schwerpunkt:
+	X:	0,044 mm (Relativer Fehler = 0,126238%)
+	Y:	-13,327 mm (Relativer Fehler = 0,126238%)
+	Z:	40,486 mm (Relativer Fehler = 0,126238%)
+Massenträgheitsmomente in Bezug auf COG(Berechnung mit negativem Integral)
+	Ixx        	25,009 kg mm^2 (Relativer Fehler = 0,126238%)
+	Iyx Iyy    	-0,011 kg mm^2 (Relativer Fehler = 0,126238%)	16,481 kg mm^2 (Relativer Fehler = 0,126238%)
+	Izx Izy Izz	-0,014 kg mm^2 (Relativer Fehler = 0,126238%)	-10,641 kg mm^2 (Relativer Fehler = 0,126238%)	9,228 kg mm^2 (Relativer Fehler = 0,126238%)
+Massenträgheitsmomente in Bezug auf Global(Berechnung mit negativem Integral)
+	Ixx        	58,795 kg mm^2 (Relativer Fehler = 0,126238%)
+	Iyx Iyy    	-0,001 kg mm^2 (Relativer Fehler = 0,126238%)	46,964 kg mm^2 (Relativer Fehler = 0,126238%)
+	Izx Izy Izz	-0,047 kg mm^2 (Relativer Fehler = 0,126238%)	-0,607 kg mm^2 (Relativer Fehler = 0,126238%)	12,531 kg mm^2 (Relativer Fehler = 0,126238%)
+Hauptträgheitsmomente in Bezug auf COG
+	I1:	25,009 kg mm^2 (Relativer Fehler = 0,126238%)
+	I2:	24,097 kg mm^2 (Relativer Fehler = 0,126238%)
+	I3:	1,613 kg mm^2 (Relativer Fehler = 0,126238%)
+Drehung von Global- zu Hauptträgheitsmoment
+	Rx:	35,59 grd (Relativer Fehler = 0,126238%)
+	Ry:	-0,04 grd (Relativer Fehler = 0,126238%)
+	Rz:	0,05 grd (Relativer Fehler = 0,126238%)

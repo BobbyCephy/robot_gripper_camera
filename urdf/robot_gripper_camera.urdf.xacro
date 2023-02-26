@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="robot_gripper_camera">
+  <xacro:property name="robot" value="$(arg robot)"/>
+  
+  <xacro:if value="${robot.startswith('ur')}">
+    <xacro:arg name="model" default="${robot}"/>
+    <xacro:include filename="$(find ur_gazebo)/urdf/ur.xacro"/>
+  </xacro:if>
+  
+  <xacro:unless value="${robot.startswith('ur')}">
+    <xacro:include filename="$(find robot_gripper_camera)/urdf/robot/$(arg robot).urdf.xacro"/>
+    <link name="world"/>
+    <joint name="world_robot" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    <gazebo>
+      <plugin name="ros_control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+  </xacro:unless>
+  
+  <xacro:include filename="$(find robot_gripper_camera)/urdf/gripper/$(arg gripper).urdf.xacro"/>
+  
+  <xacro:include filename="$(find robot_gripper_camera)/urdf/camera/$(arg camera).urdf.xacro"/>
+</robot>
+

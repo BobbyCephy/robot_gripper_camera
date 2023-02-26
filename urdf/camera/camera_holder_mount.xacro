@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="camera_holder_mount" params="parent name:=camera">
+    <link name="${name}_holder_mount_link">
+      <inertial>
+        <mass value="0.019"/>
+        <origin xyz="0.000044 -0.013327 0.040486"/>
+        <inertia ixx="0.000058795" ixy="-0.000000001" iyy="0.000046964" ixz="-0.000000047" iyz="-0.000000607" izz="0.000012531"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://robot_gripper_camera/mesh/camera_holder_mount.dae"/>
+        </geometry>
+        <material name="blue">
+          <color rgba="0 0 1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://robot_gripper_camera/mesh/camera_holder_mount.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${parent}_${name}_holder_mount_joint" type="fixed">
+      <origin xyz="-0.0195 0 0" rpy="0 0 0"/>
+      <parent link="${parent}"/>
+      <child link="${name}_holder_mount_link"/>
+    </joint>
+    <link name="${name}_holder_mount_screw"/>
+    <joint name="${name}_holder_mount_screw_joint" type="fixed">
+      <origin xyz="0 0 0.08245" rpy="0 0 0"/>
+      <parent link="${name}_holder_mount_link"/>
+      <child link="${name}_holder_mount_screw"/>
+    </joint>
+  </xacro:macro>
+</robot>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find robot_gripper_camera)/part/cube.urdf.xacro"/>
+  <arg name="suffix" default="1"/>
+  <arg name="size" default="0.03"/>
+  <arg name="x" default="0.81"/>
+  <arg name="y" default="0.3075"/>
+  <arg name="z" default="1.015"/>
+  
+  <param name="cube_description" command="$(find xacro)/xacro $(arg model) suffix:=$(arg suffix) size:=$(arg size)"/>
+  
+  <node name="spawn_cube" pkg="gazebo_ros" type="spawn_model" args="-urdf -param cube_description -x $(arg x) -y $(arg y) -z $(arg z) -model cube_$(arg suffix)" respawn="false" output="screen"/>
+</launch>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find robot_gripper_camera)/launch/world.launch"/>
+  <include file="$(find robot_gripper_camera)/launch/cuboid.launch"/>
+</launch>
+

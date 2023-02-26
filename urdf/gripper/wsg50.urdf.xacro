@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="wsg50">
+  <xacro:include filename="$(find wsg_50_simulation)/urdf/wsg_50.urdf.xacro"/>
+  <xacro:wsg_50_xacro name="wsg50" parent="tool0" finger_length="0.023" finger_tip="0">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:wsg_50_xacro>
+  <link name="tip"/>
+  <joint name="gripper_tip" type="fixed">
+    <origin xyz="0 0 ${0.0778-0.015+0.0073+0.0557}" rpy="0 0 ${-pi}"/>
+    <parent link="tool0"/>
+    <child link="tip"/>
+  </joint>
+  <gazebo>
+    <gripper name="gripper">
+      <palm_link>wsg32_base_link</palm_link>
+      <gripper_link>wsg32_base_link_gripper_left</gripper_link>
+      <gripper_link>wsg32_base_link_gripper_right</gripper_link>
+    </gripper>
+  </gazebo>
+</robot>
+

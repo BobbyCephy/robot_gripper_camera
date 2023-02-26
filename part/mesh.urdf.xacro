@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="mesh">
+  <xacro:include filename="$(find robot_gripper_camera)/part/mesh.xacro"/>
+  <xacro:mesh name="$(arg name)" file="$(arg file)"/>
+</robot>
+

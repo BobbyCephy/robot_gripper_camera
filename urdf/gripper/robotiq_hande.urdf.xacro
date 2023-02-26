@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robotiq_hande">
+  <xacro:include filename="$(find robotiq_description)/urdf/robotiq_hande.xacro"/>
+  <xacro:robotiq_hande parent="tool0" interface="Effort">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:robotiq_hande>
+  <link name="tip"/>
+  <joint name="gripper_tip" type="fixed">
+    <origin xyz="0 0 ${0.146-0.02/2}" rpy="0 0 0"/>
+    <parent link="robotiq_hande_base_link"/>
+    <child link="tip"/>
+  </joint>
+</robot>
+
