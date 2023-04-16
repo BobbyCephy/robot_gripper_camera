@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="model" default="$(find robot_gripper_camera)/part/cube.urdf.xacro"/>
+  <arg name="model" default="$(find robot_gripper_camera)/object/cube.urdf.xacro"/>
   <arg name="suffix" default="1"/>
   <arg name="size" default="0.03"/>
   <arg name="x" default="0.81"/>

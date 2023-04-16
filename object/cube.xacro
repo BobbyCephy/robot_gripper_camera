@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:include filename="$(find robot_gripper_camera)/part/cuboid.xacro"/>
+  <xacro:include filename="$(find robot_gripper_camera)/object/cuboid.xacro"/>
   <xacro:macro name="cube" params="suffix:=1 size:=1">
     <xacro:cuboid name="cube_${suffix}" x="${size}" y="${size}" z="${size}"/>
   </xacro:macro>

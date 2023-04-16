@@ -1,17 +1,15 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="model" default="$(find robot_gripper_camera)/part/cuboid.urdf.xacro"/>
+  <arg name="model" default="$(find robot_gripper_camera)/object/cuboid.urdf.xacro"/>
   <arg name="name" default="cuboid"/>
-  
   <arg name="l" default="0.025"/>
   <arg name="b" default="0.05"/>
   <arg name="h" default="0.1"/>
-  
   <arg name="x" default="0.81"/>
   <arg name="y" default="0.3075"/>
-  <arg name="z" default="1.05"/>
+  <arg name="z" default="2.05"/>
   
-  <param name="cuboid_description" command="$(find xacro)/xacro $(arg model) name:=$(arg name) l:=$(arg l) b:=$(arg b) h:=$(arg h)"/>
+  <param name="cuboid_description" command="$(find xacro)/xacro $(arg model) name:=$(arg name) x:=$(arg l) y:=$(arg b) z:=$(arg h)"/>
   
   <node name="spawn_cuboid" pkg="gazebo_ros" type="spawn_model" args="-urdf -param cuboid_description -x $(arg x) -y $(arg y) -z $(arg z) -model $(arg name)" respawn="false" output="screen"/>
 </launch>
